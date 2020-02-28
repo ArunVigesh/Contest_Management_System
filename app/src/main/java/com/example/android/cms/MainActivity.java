@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,7 +13,8 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
 
-    public static String url_cms ="https://16bff8d6.ngrok.io/cms/";
+    public static String url_cms = "https://16bff8d6.ngrok.io/cms/"; //PHP Files Location - Localhost - Replace the URL
+
     public void onBackPressed() {
         new AlertDialog.Builder(this)
                 .setMessage("Are you sure you want to exit?")
@@ -33,12 +33,10 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate( savedInstanceState );
-        setContentView( R.layout.activity_main );
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
         Button student = findViewById(R.id.button2);
         Button organiser = findViewById(R.id.button3);
-
-
 
 
         student.setOnClickListener(new View.OnClickListener() {
