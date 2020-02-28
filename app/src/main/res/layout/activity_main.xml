@@ -13,13 +13,6 @@
     android:background="@color/colorPrimaryDark">
 
 
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="365dp"
-        android:layout_height="157dp"
-        android:layout_marginLeft="10dp"
-        app:srcCompat="@drawable/logoam" />
-
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/loader"
         android:layout_width="380dp"
