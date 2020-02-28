@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.android.cms">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/contest"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".UpdStudentAdapter"></activity>
+        <activity android:name=".UpdListAdapter" />
+        <activity android:name=".certificate" />
+        <activity android:name=".SponsorListAdapter" />
+        <activity android:name=".JudgeListAdapter" />
+        <activity android:name=".EventListAdapter" />
+        <activity android:name=".StudentEventsWon" />
+        <activity android:name=".StudentRegisteredEvents" />
+        <activity android:name=".DataAdapterEvents" />
+        <activity android:name=".ViewEvent" />
+        <activity android:name=".ViewOrganiserEvent" />
+        <activity android:name=".ViewOrganiserJudge" />
+        <activity android:name=".ViewOrganiserSponser" />
+        <activity android:name=".UpdateEvent" />
+        <activity android:name=".AddSponser" />
+        <activity android:name=".AddJudge" />
+        <activity android:name=".AddEvent" />
+        <activity android:name=".StudentPass" />
+        <activity android:name=".StudentProfile" />
+        <activity android:name=".OrganiserDisplay" />
+        <activity android:name=".StudentDisplay" />
+        <activity android:name=".OrganiserRegister" />
+        <activity android:name=".StudentRegister" />
+        <activity android:name=".OrganiserLogin" />
+        <activity android:name=".StudentLogin" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,79 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StudentDisplay"
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryDark">
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="17dp"
+        android:layout_toLeftOf="@+id/textView9"
+        android:fontFamily="monospace"
+        android:text="Profile"
+        android:textColor="@color/colorText"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Password"
+        android:layout_toLeftOf="@+id/textView8"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:textColor="@color/colorText"
+        android:layout_margin="16dp"/>
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="16dp"
+        android:text="Logout"
+        android:textColor="@color/colorText"
+        android:textStyle="bold"
+        android:fontFamily="monospace"/>
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loader1"
+        android:layout_width="380dp"
+        android:layout_height="207dp"
+        app:lottie_autoPlay="true"
+        android:layout_below="@id/textView8"
+        app:lottie_loop="true"
+        android:layout_marginLeft="20dp"
+        app:lottie_rawRes="@raw/stu" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AVAILABLE EVENTS"
+        android:layout_below="@id/loader1"
+        android:layout_marginLeft="110dp"
+        android:textSize="20sp"
+        android:textColor="@color/colorText"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/recyclerView"
+        android:layout_below="@id/textView18"
+        android:padding="16dp"
+        android:layout_margin="8dp"
+        android:layout_height="match_parent" />
+
+
+</RelativeLayout>
