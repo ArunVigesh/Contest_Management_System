@@ -1,0 +1,29 @@
+<?php
+$response = array();
+$con = mysqli_connect("localhost", "cms", "cms", "cms") or die(mysqli_error($con));
+    $query="SELECT * FROM judge";
+    $result = mysqli_query($con,$query) or die(mysqli_error($con));
+    if (mysqli_num_rows($result) > 0) 
+    {
+        $response["judgelist"] = array();
+        while ($row = mysqli_fetch_array($result))
+        {
+            $judge = array();
+            $judge["jId"] = $row["jId"];
+            $judge["jFirstName"] = $row["jFirstName"];
+            $judge["jLastName"] = $row["jLastName"];
+            $judge["jPhone"] = $row["jPhone"];
+            $judge["jEmail"] = $row["jEmail"];
+            $judge["jSpecialization"] = $row["jSpecialization"];
+            array_push($response["judgelist"], $judge);
+        }
+        echo json_encode($response);
+    } 
+        else 
+    {
+        $response["judgelist"] = "";
+        echo json_encode($response);
+    }
+
+
+?>
